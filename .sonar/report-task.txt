@@ -1,6 +1,6 @@
 projectKey=Node-js-App
-serverUrl=http://172.25.7.234:9000
+serverUrl=http://172.24.60.222:9000
 serverVersion=10.7.0.96327
-dashboardUrl=http://172.25.7.234:9000/dashboard?id=Node-js-App
-ceTaskId=c9682c1f-d4f2-40d0-89be-ff3b93850770
-ceTaskUrl=http://172.25.7.234:9000/api/ce/task?id=c9682c1f-d4f2-40d0-89be-ff3b93850770
+dashboardUrl=http://172.24.60.222:9000/dashboard?id=Node-js-App
+ceTaskId=1d874ced-3d27-41de-91a5-39e0e4803273
+ceTaskUrl=http://172.24.60.222:9000/api/ce/task?id=1d874ced-3d27-41de-91a5-39e0e4803273

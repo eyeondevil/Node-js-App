@@ -1,13 +1,27 @@
 const path = require('path');
-const nodeExternals = require('webpack-node-externals');
+const webpackNodeExternals = require('webpack-node-externals');
 
 module.exports = {
-  entry: './server.js',
-  target: 'node',
-  externals: [nodeExternals()],
+  target: 'node', // Specifies that we're building for Node.js
+  entry: './server.js', // Your app entry file
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: 'bundle.js', // Bundled file for your app
   },
-  mode: 'production',
+  externals: [webpackNodeExternals()], // Exclude node_modules from bundling
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'], // Ensures compatibility with older Node.js versions
+          },
+        },
+      },
+    ],
+  },
+  devtool: 'source-map', // Generate source maps for easier debugging
 };
